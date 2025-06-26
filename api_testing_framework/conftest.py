@@ -1,0 +1,1 @@
+# No special setup yet. You can later add global fixtures for tokens, sessions, logging, etc.
