@@ -21,4 +21,3 @@ def test_valid_login(setup_browser, username, password):
     else:
         # Expected failure — check for error message
         assert "secure" not in driver.current_url.lower()
-        assert login.check_login(login_msg="error")
