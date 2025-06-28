@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.12.3 on linux)" generated="2025-06-28T22:11:57.223679" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/subhradip/Documents/TUTORIALS/Python_Programming/Python_selenium/Python_Automation_Testing_Practice/robot_framework/tests">
+<suite id="s1-s1" name="Api" source="/home/subhradip/Documents/TUTORIALS/Python_Programming/Python_selenium/Python_Automation_Testing_Practice/robot_framework/tests/api">
+<suite id="s1-s1-s1" name="Test User Api" source="/home/subhradip/Documents/TUTORIALS/Python_Programming/Python_selenium/Python_Automation_Testing_Practice/robot_framework/tests/api/test_user_api.robot">
+<test id="s1-s1-s1-t1" name="Verify User API Returns 200" line="7">
+<kw name="Get User Details" owner="api_keywords">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-06-28T22:11:57.342028" level="INFO">Creating Session using : alias=api, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>api</arg>
+<arg>${API_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-06-28T22:11:57.341880" elapsed="0.000401"/>
+</kw>
+<kw name="Get Request" owner="RequestsLibrary">
+<msg time="2025-06-28T22:11:57.342402" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2025-06-28T22:11:57.507886" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/ 
+ path_url=/ 
+ headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-06-28T22:11:57.508547" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/ 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 28 Jun 2025 16:41:57 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Encoding': 'gzip', 'access-control-allow-credentials': 'true', 'Cache-Control': 'public, max-age=43200', 'last-modified': 'Fri, 27 Jun 2025 18:35:07 GMT', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=ba69m9YXFp04ggceU4duPQOfGJ%2Fj52OAIg3KCDdD90c%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1751050259"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=ba69m9YXFp04ggceU4duPQOfGJ%2Fj52OAIg3KCDdD90c%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1751050259"', 'vary': 'Origin, Accept-Encoding', 'via': '2.0 heroku-router', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '999', 'x-ratelimit-reset': '1751050275', 'Age': '16960', 'cf-cache-status': 'HIT', 'Server': 'cloudflare', 'CF-RAY': '956ea27619b42c07-MAA', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=39965&amp;min_rtt=39894&amp;rtt_var=11283&amp;sent=4&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2842&amp;recv_bytes=778&amp;delivery_rate=72184&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=cc66da3e210af3c6&amp;ts=54&amp;x=0"'} 
+ body=
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    /&gt;
+    &lt;link rel="stylesheet" href="/style.css" /&gt;
+    &lt;link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-lucario.min.css"
+    /&gt;
+    &lt;title&gt;JSONPlaceholder - Free Fake REST API&lt;/title&gt;
+    &lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+    &lt;script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-E3C3GCQVBN"
+    &gt;&lt;/script&gt;
+    &lt;script&gt;
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-E3C3GCQVBN')
+    &lt;/script&gt;
+    &lt;script
+      async
+      src="https://media.ethicalads.io/media/client/ethicalads.min.js"
+    &gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;!-- Banner --&gt;
+    &lt;div class="bg-blue-500 text-center py-2"&gt;
+      &lt;div class="container mx-auto"&gt;
+        &lt;a href="https://github.com/typicode/mistcss" class="text-white"&gt;Check my new project &lt;strong&gt;💧 MistCSS&lt;/strong&gt; write React components with 50% less code&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;header
+      class="
+        container
+        mx-auto
+        max-w-4xl
+        flex flex-col
+        md:flex-row
+        justify-between
+        py-one
+        mb-three
+      "
+    &gt;
+      &lt;h1&gt;
+        &lt;a href="/" class="font-bold no-underline"&gt;JSONPlaceholder&lt;/a&gt;
+      &lt;/h1&gt;
+      &lt;nav&gt;
+        &lt;ul class="flex"&gt;
+          &lt;li&gt;&lt;a href="/guide" class="mr-4 no-underline"&gt;Guide&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a
+              href="https://github.com/sponsors/typicode"
+              class="mr-4 no-underline"
+              &gt;Sponsor this project&lt;/a
+            &gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href="https://blog.typicode.com" class="mr-4 no-underline"
+              &gt;Blog&lt;/a
+            &gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href="https://my-json-server.typicode.com" class="no-underline"
+              &gt;My JSON Server&lt;/a
+            &gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;div&gt;
+&lt;!-- Hero --&gt;
+&lt;section id="hero" class="-mt-three py-20 mb-six -mx-2"&gt;
+  &lt;div class="container mx-auto max-w-4xl"&gt;
+    &lt;span class="text-6xl bold"&gt;{JSON} Placeholder&lt;/span&gt;
+    &lt;h1 class="mt-two text-lg"&gt;
+      Free fake and reliable API for testing and prototyping.
+    &lt;/h1&gt;
+    &lt;p class="mb-one text-lg"&gt;
+      Powered by
+      &lt;a href="https://github.com/typicode/json-server"&gt;JSON Server&lt;/a&gt;
+      +
+      &lt;a href="https://github.com/typicode/lowdb"&gt;LowDB&lt;/a&gt;.
+    &lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Serving ~3 billion requests each month&lt;/b&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- Sponsors --&gt;
+&lt;section class="container mx-auto max-w-4xl mb-six"&gt;
+  &lt;h2 class="text-2xl mb-one"&gt;Sponsors&lt;/h2&gt;
+  &lt;p class="mb-two"&gt;
+    JSONPlaceholder is supported by the following companies and
+    &lt;a href="https://github.com/sponsors/typicode"&gt;Sponsors&lt;/a&gt; on GitHub, check
+    them out 💖
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    &lt;a href="https://mockend.com" target="_blank"&gt;
+      &lt;img src="mockend.svg" class="mb-two" style="height: 100px"  /&gt;
+    &lt;/a&gt;
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    &lt;a href="https://zuplo.link/json-server-web" target="_blank"&gt;
+      &lt;img src="https://github.com/user-attachments/assets/adfee31f-a8b6-4684-9a9b-af4f03ac5b75" class="mb-two" style="height: 100px" /&gt;
+    &lt;/a&gt;
+  &lt;/p&gt;
+
+  &lt;p class="my-two"&gt;
+    &lt;a href="https://github.com/sponsors/typicode"&gt;Your company logo here&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;!-- Example --&gt;
+&lt;section class="container mx-auto max-w-4xl mb-four"&gt;
+  &lt;h2 class="text-2xl mb-one"&gt;Try it&lt;/h2&gt;
+  &lt;p&gt;Run this code here, in a console or from any site:&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code id="example" class="language-javascript"&gt;fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response =&gt; response.json())
+      .then(json =&gt; console.log(json))&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;button
+    id="run-button"
+    class="
+      bg-black
+      hover:bg-gray-700
+      text-white
+      font-bold
+      py-quarter
+      my-quarter
+      px-4
+      rounded
+    "
+  &gt;
+    Run script
+  &lt;/button&gt;
+
+  &lt;pre&gt;&lt;code id="result" class="language-javascript"&gt;{}&lt;/code&gt;&lt;/pre&gt;
+  &lt;p id="run-message" class="invisible"&gt;
+    Congrats! You've made your first call to JSONPlaceholder. 😃 🎉
+  &lt;/p&gt;
+  &lt;div
+    class="horizontal flat adaptive"
+    data-ea-publisher="jsonplaceholdertypicodecom"
+    data-ea-style="stickybox"
+    data-ea-keywords="javascript|typescript|mobile|react|vue|frontend|front-end|backend|back-end"
+  &gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;main class="container mx-auto max-w-4xl"&gt;&lt;h2&gt;When to use&lt;/h2&gt;
+&lt;p&gt;JSONPlaceholder is a free online REST API that you can use &lt;strong&gt;whenever you need some fake data&lt;/strong&gt;. It can be in a README on GitHub, for a demo on CodeSandbox, in code examples on Stack Overflow, ...or simply to test things locally.&lt;/p&gt;
+&lt;h2&gt;Resources&lt;/h2&gt;
+&lt;p&gt;JSONPlaceholder comes with a set of 6 common resources:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="/posts"&gt;/posts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;100 posts&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="/comments"&gt;/comments&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;500 comments&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="/albums"&gt;/albums&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;100 albums&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="/photos"&gt;/photos&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;5000 photos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="/todos"&gt;/todos&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;200 todos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="/users"&gt;/users&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;10 users&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: resources have relations. For example: posts have many comments, albums have many photos, ... see &lt;a href="/guide"&gt;guide&lt;/a&gt; for the full list.&lt;/p&gt;
+&lt;h2&gt;Routes&lt;/h2&gt;
+&lt;p&gt;All HTTP methods are supported. You can use http or https for your requests.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;GET&lt;/td&gt;
+&lt;td&gt;&lt;a href="/posts"&gt;/posts&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GET&lt;/td&gt;
+&lt;td&gt;&lt;a href="/posts/1"&gt;/posts/1&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GET&lt;/td&gt;
+&lt;td&gt;&lt;a href="/posts/1/comments"&gt;/posts/1/comments&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GET&lt;/td&gt;
+&lt;td&gt;&lt;a href="/comments?postId=1"&gt;/comments?postId=1&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;POST&lt;/td&gt;
+&lt;td&gt;/posts&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PUT&lt;/td&gt;
+&lt;td&gt;/posts/1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PATCH&lt;/td&gt;
+&lt;td&gt;/posts/1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DELETE&lt;/td&gt;
+&lt;td&gt;/posts/1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: see &lt;a href="/guide"&gt;guide&lt;/a&gt; for usage examples.&lt;/p&gt;
+&lt;h2&gt;Use your own data&lt;/h2&gt;
+&lt;p&gt;With our sponsor &lt;a href="https://mockend.com"&gt;Mockend&lt;/a&gt; and a simple GitHub repo, you can have your own fake online REST server in seconds.&lt;/p&gt;
+&lt;/main&gt;
+
+&lt;script&gt;
+  // Use http or https based on location.protocol
+  var example = document.getElementById('example')
+  example.textContent = example.textContent.replace('http:', location.protocol)
+
+  // Highlight result element
+  var result = document.getElementById('result')
+
+  // Run example
+  var runButton = document.getElementById('run-button')
+  runButton.onclick = function () {
+    var root = location.protocol + '//jsonplaceholder.typicode.com'
+    var runMessage = document.getElementById('run-message')
+
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then((response) =&gt; response.json())
+      .then((json) =&gt; {
+        var str = JSON.stringify(json, null, '  ')
+
+        // Format result
+        result.innerHTML = Prism.highlight(
+          str,
+          Prism.languages.javascript,
+          'javascript'
+        )
+
+        runMessage.className = ''
+      })
+  }
+&lt;/script&gt;
+&lt;/div&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer class="container mx-auto max-w-4xl mt-four"&gt;
+      &lt;div class="mb-one"&gt;
+        &lt;a href="https://github.com/users/typicode/sponsorship"&gt;
+          &lt;strong&gt;You can sponsor this project (and others) on GitHub&lt;/strong&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-one"&gt;
+        Coded and maintained with ❤️ by
+        &lt;a href="https://github.com/typicode"&gt;typicode&lt;/a&gt; © 2024
+      &lt;/div&gt;
+    &lt;/footer&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+ 
+ </msg>
+<msg time="2025-06-28T22:11:57.509743" level="INFO">/home/subhradip/Documents/TUTORIALS/Python_Programming/Python_selenium/VENV_PRACTICE/lib/python3.12/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-06-28T22:11:57.510212" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>api</arg>
+<arg>/</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<status status="PASS" start="2025-06-28T22:11:57.342379" elapsed="0.167950"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-06-28T22:11:57.510837" elapsed="0.000914"/>
+</kw>
+<status status="PASS" start="2025-06-28T22:11:57.341431" elapsed="0.170592"/>
+</kw>
+<status status="PASS" start="2025-06-28T22:11:57.340883" elapsed="0.171648"/>
+</test>
+<status status="PASS" start="2025-06-28T22:11:57.244189" elapsed="0.269716"/>
+</suite>
+<status status="PASS" start="2025-06-28T22:11:57.243411" elapsed="0.272238"/>
+</suite>
+<suite id="s1-s2" name="Web" source="/home/subhradip/Documents/TUTORIALS/Python_Programming/Python_selenium/Python_Automation_Testing_Practice/robot_framework/tests/web">
+<suite id="s1-s2-s1" name="Test Login" source="/home/subhradip/Documents/TUTORIALS/Python_Programming/Python_selenium/Python_Automation_Testing_Practice/robot_framework/tests/web/test_login.robot">
+<test id="s1-s2-s1-t1" name="Login Test - Valid User" line="7">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-28T22:11:57.598264" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-28T22:11:57.598046" elapsed="10.276796"/>
+</kw>
+<kw name="Login To Application" owner="web_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-28T22:12:07.878736" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-28T22:12:07.877421" elapsed="0.098092"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-28T22:12:07.976086" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-28T22:12:07.975783" elapsed="0.067630"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-28T22:12:08.043922" level="INFO">Clicking button 'class=radius'.</msg>
+<arg>class=radius</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-28T22:12:08.043649" elapsed="0.074198"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-06-28T22:12:16.874112" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-28T22:12:16.874256" level="FAIL">Page should have contained element 'xpath=//div[@class='flash success']' but did not.</msg>
+<arg>xpath=//div[@class='flash success']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="FAIL" start="2025-06-28T22:12:08.118018" elapsed="8.870869">Page should have contained element 'xpath=//div[@class='flash success']' but did not.</status>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="FAIL" start="2025-06-28T22:12:07.875889" elapsed="9.113609">Page should have contained element 'xpath=//div[@class='flash success']' but did not.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-28T22:12:16.990998" elapsed="0.141603"/>
+</kw>
+<status status="FAIL" start="2025-06-28T22:11:57.597511" elapsed="19.535208">Page should have contained element 'xpath=//div[@class='flash success']' but did not.</status>
+</test>
+<status status="FAIL" start="2025-06-28T22:11:57.519374" elapsed="19.613656"/>
+</suite>
+<status status="FAIL" start="2025-06-28T22:11:57.516926" elapsed="19.616501"/>
+</suite>
+<status status="FAIL" start="2025-06-28T22:11:57.224368" elapsed="19.909376"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="1" skip="0">Tests</stat>
+<stat name="Api" id="s1-s1" pass="1" fail="0" skip="0">Tests.Api</stat>
+<stat name="Test User Api" id="s1-s1-s1" pass="1" fail="0" skip="0">Tests.Api.Test User Api</stat>
+<stat name="Web" id="s1-s2" pass="0" fail="1" skip="0">Tests.Web</stat>
+<stat name="Test Login" id="s1-s2-s1" pass="0" fail="1" skip="0">Tests.Web.Test Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-28T22:11:57.342402" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+</errors>
+</robot>

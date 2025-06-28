@@ -2,4 +2,7 @@ selenium
 pytest
 pytest-html
 robotframework
+robotframework-seleniumlibrary
+robotframework-requests
 requests
+chromedriver-autoinstaller
