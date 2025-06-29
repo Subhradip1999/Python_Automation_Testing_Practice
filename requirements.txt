@@ -6,3 +6,5 @@ robotframework-seleniumlibrary
 robotframework-requests
 requests
 chromedriver-autoinstaller
+behave
+python-dotenv
